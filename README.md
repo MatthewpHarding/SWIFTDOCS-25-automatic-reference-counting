@@ -7,10 +7,10 @@ Taken from the [official Swift documentation](https://docs.swift.org/swift-book/
 ![Xcode Playground](readme-images/xcode-icon.png)
 ![Swift Playground Icon](readme-images/playground-file.png)
 
-👉 You can [view this document in Xcode](https://github.com/MatthewpHarding/SWIFTDOCS-1-the-basics/archive/refs/heads/main.zip) to run and edit each example.
+👉 You can [view this document in Xcode](https://github.com/MatthewpHarding/SWIFTDOCS-25-automatic-reference-counting/archive/refs/heads/main.zip) to run and edit each example.
 ## Run This File In Xcode
 
-**Step 1:** Clone this repo or [Download the files](https://github.com/MatthewpHarding/SWIFTDOCS-1-the-basics/archive/refs/heads/main.zip).
+**Step 1:** Clone this repo or [Download the files](https://github.com/MatthewpHarding/SWIFTDOCS-25-automatic-reference-counting/archive/refs/heads/main.zip).
 
 **Step 2:** In Xcode, ensure you have selected **Editor/Show Rendered Markup** to view the formatted instructions.
 
