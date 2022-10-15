@@ -10,7 +10,7 @@ Taken from the [official Swift documentation](https://docs.swift.org/swift-book/
 👉 You can [view this document in Xcode](https://github.com/MatthewpHarding/SWIFTDOCS-25-automatic-reference-counting/archive/refs/heads/main.zip) to run and edit each example.
 ## Run This File In Xcode
 
-**Step 1:** Clone this repo or [Download the files](https://github.com/MatthewpHarding/SWIFTDOCS-25-automatic-reference-counting/archive/refs/heads/main.zip).
+**Step 1:** Clone this repo or [download the files](https://github.com/MatthewpHarding/SWIFTDOCS-25-automatic-reference-counting/archive/refs/heads/main.zip).
 
 **Step 2:** In Xcode, ensure you have selected **Editor/Show Rendered Markup** to view the formatted instructions.
 
