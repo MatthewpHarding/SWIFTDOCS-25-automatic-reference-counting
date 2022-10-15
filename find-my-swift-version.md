@@ -1,10 +1,16 @@
-![Swift](swift-logo.png)
+![Swift](readme-images/swift-logo.png)
 
-Swift v5.7 | [different versions](find-my-swift-version.md) | [Swift.org](https://docs.swift.org) 
+Swift v5.7 | [Swift versions](find-my-swift-version.md) | [Swift.org](https://docs.swift.org).
 
 Taken from the [official Swift documentation](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html).
 
-✔️ Editable Swift Xcode .playground files included.
+🤩 *..let's live a better life, by learning Swift* 🛠
+
+```Swift
+let myLife = [learning, coding, happiness] 
+```
+### 🧕🏻👨🏿‍💼👩🏼‍💼👩🏻‍💻👨🏼‍💼🧛🏻‍♀️👩🏼‍💻💁🏽‍♂️🕵🏻‍♂️🧝🏼‍♀️🦹🏼‍♀🧕🏾🧟‍♂️
+-----------
 
 # 🔎 Find My Version of Swift
 
@@ -16,7 +22,7 @@ Finding your current version of Swift is easy. Just follow the steps below:
 
 In the example below the Terminal console window printed, 'Apple Swift version 5.6.1'. In this case, the version of Swift would be v5.6.1. 👍
 
-![Terminal](swift-version.png)
+![Terminal](readme-images/swift-version.png)
 
 
 
@@ -39,7 +45,7 @@ Taken from **official Swift** documentation found [here ](https://docs.swift.org
 @[MatthewpHarding](https://github.com/MatthewpHarding) 🔗
 
 
-Teaching the `Swift` programming language.
+🤩 *..let's live a better life, by learning Swift* 🛠
 
 ```Swift
 let myLife = [learning, coding, happiness] 
