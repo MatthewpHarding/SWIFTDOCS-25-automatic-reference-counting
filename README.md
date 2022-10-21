@@ -139,7 +139,7 @@ unit4A = Apartment(unit: "4A")
 ```
 Here’s how the strong references look after creating and assigning these two instances. The john variable now has a strong reference to the new Person instance, and the unit4A variable has a strong reference to the new Apartment instance:
 
-![Diagram](referenceCycle01_2x.png)
+![Diagram](readme-images/referenceCycle01_2x.png)
 
 You can now link the two instances together so that the person has an apartment, and the apartment has a tenant. Note that an exclamation point (!) is used to unwrap and access the instances stored inside the john and unit4A optional variables, so that the properties of those instances can be set:
 
@@ -149,7 +149,7 @@ unit4A!.tenant = john
 ```
 Here’s how the strong references look after you link the two instances together:
 
-![Diagram](referenceCycle02_2x.png)
+![Diagram](readme-images/referenceCycle02_2x.png)
 
 Unfortunately, linking these two instances creates a strong reference cycle between them. The Person instance now has a strong reference to the Apartment instance, and the Apartment instance has a strong reference to the Person instance. Therefore, when you break the strong references held by the john and unit4A variables, the reference counts don’t drop to zero, and the instances aren’t deallocated by ARC:
 
@@ -161,7 +161,7 @@ Note that neither deinitializer was called when you set these two variables to n
 
 Here’s how the strong references look after you set the john and unit4A variables to nil:
 
-![Diagram](referenceCycle03_2x.png)
+![Diagram](readme-images/referenceCycle03_2x.png)
 
 The strong references between the Person instance and the Apartment instance remain and can’t be broken.
 
@@ -216,7 +216,7 @@ unit4A2!.tenant = john2
 ```
 Here’s how the references look now that you’ve linked the two instances together:
 
-![Diagram](weakReference01_2x.png)
+![Diagram](readme-images/weakReference01_2x.png)
 
 The Person instance still has a strong reference to the Apartment instance, but the Apartment instance now has a weak reference to the Person instance. This means that when you break the strong reference held by the john variable by setting it to nil, there are no more strong references to the Person instance:
 
@@ -226,7 +226,7 @@ john2 = nil
 ```
 Because there are no more strong references to the Person instance, it’s deallocated and the tenant property is set to nil:
 
-![Diagram](weakReference02_2x.png)
+![Diagram](readme-images/weakReference02_2x.png)
 
 The only remaining strong reference to the Apartment instance is from the unit4A variable. If you break that strong reference, there are no more strong references to the Apartment instance:
 
@@ -236,7 +236,7 @@ unit4A = nil
 ```
 Because there are no more strong references to the Apartment instance, it too is deallocated:
 
-![Diagram](weakReference03_2x.png)
+![Diagram](readme-images/weakReference03_2x.png)
 
 >Note
 >
@@ -299,13 +299,13 @@ john3!.card = CreditCard(number: 1234_5678_9012_3456, customer: john3!)
 ```
 Here’s how the references look, now that you’ve linked the two instances:
 
-![Diagram](unownedReference01_2x.png)
+![Diagram](readme-images/unownedReference01_2x.png)
 
 The Customer instance now has a strong reference to the CreditCard instance, and the CreditCard instance has an unowned reference to the Customer instance.
 
 Because of the unowned customer reference, when you break the strong reference held by the john variable, there are no more strong references to the Customer instance:
 
-![Diagram](unownedReference02_2x.png)
+![Diagram](readme-images/unownedReference02_2x.png)
 
 Because there are no more strong references to the Customer instance, it’s deallocated. After this happens, there are no more strong references to the CreditCard instance, and it too is deallocated:
 
@@ -366,7 +366,7 @@ department.courses = [intro, intermediate, advanced]
 ```
 The code above creates a department and its three courses. The intro and intermediate courses both have a suggested next course stored in their nextCourse property, which maintains an unowned optional reference to the course a student should take after completing this one.
 
-![Diagram](unownedOptionalReference_2x.png)
+![Diagram](readme-images/unownedOptionalReference_2x.png)
 
 An unowned optional reference doesn’t keep a strong hold on the instance of the class that it wraps, and so it doesn’t prevent ARC from deallocating the instance. It behaves the same as an unowned reference does under ARC, except that an unowned optional reference can be nil.
 
@@ -503,7 +503,7 @@ print(paragraph!.asHTML())
 
 Unfortunately, the HTMLElement class, as written above, creates a strong reference cycle between an HTMLElement instance and the closure used for its default asHTML value. Here’s how the cycle looks:
 
-![Diagram](closureReferenceCycle01_2x.png)
+![Diagram](readme-images/closureReferenceCycle01_2x.png)
 
 The instance’s asHTML property holds a strong reference to its closure. However, because the closure refers to self within its body (as a way to reference self.name and self.text), the closure captures self, which means that it holds a strong reference back to the HTMLElement instance. A strong reference cycle is created between the two. (For more information about capturing values in a closure, see Capturing Values.)
 
@@ -605,7 +605,7 @@ print(paragraph2!.asHTML())
 ```
 Here’s how the references look with the capture list in place:
 
-![Diagram](closureReferenceCycle02_2x.png)
+![Diagram](readme-images/closureReferenceCycle02_2x.png)
 
 This time, the capture of self by the closure is an unowned reference, and doesn’t keep a strong hold on the HTMLElement instance it has captured. If you set the strong reference from the paragraph variable to nil, the HTMLElement instance is deallocated, as can be seen from the printing of its deinitializer message in the example below:
 
