@@ -232,9 +232,9 @@ Like a weak reference, an unowned reference doesn’t keep a strong hold on the 
 
 Unlike a weak reference, an unowned reference is expected to always have a value. As a result, marking a value as unowned doesn’t make it optional, and ARC never sets an unowned reference’s value to nil.
 
-IMPORTANT
-
-Use an unowned reference only when you are sure that the reference always refers to an instance that hasn’t been deallocated.
+>Important
+>
+>→ Use an unowned reference only when you are sure that the reference always refers to an instance that hasn’t been deallocated.
 
 If you try to access the value of an unowned reference after that instance has been deallocated, you’ll get a runtime error.
 
